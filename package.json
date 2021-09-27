@@ -1,0 +1,24 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000F\u0000o\u0000r\u0000m\u0000X\u0000\r\u0000 \u0000#\u0000 \u0000F\u0000o\u0000r\u0000m\u0000X\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinitumkiran/FormX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infinitumkiran/FormX/issues"
+  },
+  "homepage": "https://github.com/infinitumkiran/FormX#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
+  }
+}
