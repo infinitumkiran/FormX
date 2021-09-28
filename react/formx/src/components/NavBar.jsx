@@ -12,14 +12,14 @@ const NavBar = () => {
     }}>
       INFINITY  
     </NavLink>
-    <NavLink to ="add" style= { {color:"white",
+    <NavLink to ="all" style= { {color:"white",
         marginRight: 20,
         textDecoration: 'none',
         fontSize: 20
     }}>
       AllUsers  
     </NavLink>
-    <NavLink to ="all" style= { {color:"white",
+    <NavLink to ="add" style= { {color:"white",
         marginRight: 20,
         textDecoration: 'none',
         fontSize: 20
