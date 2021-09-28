@@ -1,6 +1,7 @@
 import { getUsers,deleteUser } from "../Service/api";
 import { useEffect,useState } from "react";
-import { Table,TableBody,TableRow,TableCell,TableHead, } from "@mui/material"
+import { Table,TableBody,TableRow,TableCell,TableHead,Button } from "@mui/material"
+import {Link} from 'react-router-dom';
 
 const Allusers = () => {
 
@@ -34,6 +35,7 @@ const Allusers = () => {
                 <TableCell style={{color: 'white',fontSize: '20px'}}>USERNAME</TableCell>
                 <TableCell style={{color: 'white',fontSize: '20px'}}>EMAIL</TableCell>
                 <TableCell style={{color: 'white',fontSize: '20px'}}>PHONE</TableCell>
+                <TableCell style={{color: 'white',fontSize: '20px'}}></TableCell>
                 </TableRow>   
             </TableHead>
             <TableBody>
@@ -49,6 +51,10 @@ const Allusers = () => {
                             <TableCell>{user.username}</TableCell>
                             <TableCell>{user.email}</TableCell>
                             <TableCell>{user.phone}</TableCell>
+                            <TableCell>
+                            <Button color="primary" variant="contained" style={{marginRight:10}} component={Link} >Edit</Button>
+                            <Button color="secondary" variant="contained" onClick={() => deleteUserData(user._id)}>Delete</Button> 
+                            </TableCell>
                         </TableRow>
 
                     ))
