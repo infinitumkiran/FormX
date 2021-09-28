@@ -9,3 +9,12 @@ export const getUsers = async() => {
 export const deleteUser = async() => {
     return await axios.delete(url);
 }
+
+export const updateUser = async() => {
+    return await axios.put(url);
+}
+
+
+export const addUser = async(user) => {
+    return await axios.post(url,user);
+}
