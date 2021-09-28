@@ -2,16 +2,18 @@ import axios from 'axios';
 
 const url = 'http://localhost:3003/users';
 
-export const getUsers = async() => {
-    return await axios.get(url);
+
+
+export const getUsers = async (id) => {
+    id = id || '';
+    return await axios.get(`${url}/${id}`);
+}
+export const deleteUser = async(id) => {
+    return await axios.delete(`${url}/${id}`);
 }
 
-export const deleteUser = async() => {
-    return await axios.delete(url);
-}
-
-export const updateUser = async() => {
-    return await axios.put(url);
+export const editUser = async(id,user) => {
+    return await axios.put(`${url}/${id}`,url);
 }
 
 
