@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./components/NavBar";
+import Infinity from "./components/Infinity"
+import Addusers from "./components/Addusers"
+import Allusers from "./components/Allusers"
+import NotFound from "./components/NotFound";
+import {BrowserRouter,Route,Switch} from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <p>
+      <BrowserRouter>
+        <NavBar></NavBar>
+        <Switch>
+        <Route exact path="/" component={Infinity} />
+        <Route exact path="/all" component={Allusers} />
+        <Route exact path="/add" component={Addusers} />
+        <NotFound Component={NotFound} />
+        </Switch>
+        
+      </BrowserRouter>
+
+      
+    </p>
+      );
 }
 
 export default App;
