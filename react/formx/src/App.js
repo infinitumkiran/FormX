@@ -8,7 +8,7 @@ import {BrowserRouter,Route,Switch} from "react-router-dom"
 
 function App() {
   return (
-    <p>
+    <>
       <BrowserRouter>
         <NavBar></NavBar>
         <Switch>
@@ -18,11 +18,10 @@ function App() {
         <Route exact path="/edit/:id" component={EditUser} />
         <NotFound Component={NotFound} />
         </Switch>
-        
       </BrowserRouter>
 
       
-    </p>
+    </>
       );
 }
 
