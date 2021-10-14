@@ -22,10 +22,12 @@ const AddUser = () => {
     const addUserDetails = async () => {
         await addUser(user).then((response) => {
             console.log(response);
+            history.push('./all');
         }).catch((error) => {
             console.error(error);
+            alert(error.message);
         })
-        history.push('./all');
+
     }
 
     return (

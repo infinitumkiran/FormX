@@ -14,8 +14,10 @@ export const getUsers = async (request, response, next) => {
 export const addUser = async (request, response) => {
 
     const user = request.body;
-    console.log(request.body);
-
+    const users = await User.find({ 'name': user.name }, { 'email': user.email },);
+    if (users.length != 0) {
+        response.status(401).json({ message: 'user exists' });
+    }
     const newUser = new User(user);
     try {
         await newUser.save();
